@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyoWorks — Capture. Measure. Transform.</title>
+<meta name="description" content="MyoWorks builds connected instruments for manual therapists — soft-tissue tools that capture objective clinical data as you treat.">
+<link rel="icon" href="assets/MyoWorks_Emblem.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---- home hero ---- */
+.hero{padding:92px 0 84px;text-align:center;background:linear-gradient(180deg,var(--paper-2),var(--paper))}
+.hero .emblem{width:118px;height:118px;margin:0 auto 28px}
+.hero .wordmark{height:clamp(48px,9vw,88px);width:auto;margin:0 auto;max-width:760px}
+.hero .tagline{height:clamp(14px,2vw,19px);width:auto;margin:20px auto 0;opacity:.82;max-width:600px}
+.hero p.sub{max-width:552px;margin:32px auto 0;color:var(--dim);font-size:1.06rem}
+.hero .cta-row{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ---- thesis strip ---- */
+.thesis{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--paper)}
+.thesis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.thesis-cell{background:var(--paper);padding:52px 38px;position:relative;transition:background .3s}
+.thesis-cell:hover{background:var(--paper-2)}
+.thesis-cell .ic{
+  width:52px;height:52px;border-radius:12px;background:var(--green-tint);
+  display:flex;align-items:center;justify-content:center;color:var(--green-dark);margin-bottom:22px;
+}
+.thesis-cell h3{font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:1.32rem;letter-spacing:.02em;margin-bottom:11px}
+.thesis-cell p{color:var(--dim);font-size:.96rem;line-height:1.6}
+
+/* ---- product family ---- */
+.fam-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px}
+.fam-card{
+  background:var(--paper);border:1px solid var(--border-2);border-radius:10px;
+  padding:40px 32px 34px;text-align:center;transition:.3s;display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+}
+.fam-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.fam-card:hover{transform:translateY(-6px);border-color:var(--border-2);box-shadow:0 24px 48px -28px rgba(17,17,17,.35)}
+.fam-card:hover::before{transform:scaleX(1)}
+.fam-logo{height:36px;width:auto;margin:6px auto 24px;object-fit:contain}
+.fam-card p{color:var(--dim);font-size:.95rem;flex:1;line-height:1.6}
+.fam-card .more{margin-top:24px;font-family:'Saira',sans-serif;font-weight:600;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green-dark);transition:gap .2s}
+
+/* ---- cta band ---- */
+.ctaband{background:var(--ink);border-radius:0;text-align:center;padding:88px 0}
+.ctaband h2{font-family:'Saira Condensed',sans-serif;font-weight:700;color:#fff;font-size:clamp(1.9rem,4.6vw,2.9rem);letter-spacing:.02em}
+.ctaband p{color:#B7BDB3;margin-top:16px;max-width:520px;margin-left:auto;margin-right:auto}
+.ctaband .btn{margin-top:30px}
+
+@media (max-width:820px){
+  .thesis-grid{grid-template-columns:1fr}
+  .fam-grid{grid-template-columns:1fr}
+  .hero .wordmark{max-width:88vw}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img class="coin" src="assets/MyoWorks_Emblem.svg" alt="MyoWorks emblem">
+      <img class="wm" src="assets/MyoWorks_Wordmark.svg" alt="MyoWorks">
+    </a>
+    <button class="nav-toggle" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <img class="emblem" src="assets/MyoWorks_Emblem.svg" alt="MyoWorks emblem">
+    <img class="wordmark" src="assets/MyoWorks_Wordmark.svg" alt="MYOWORKS">
+    <img class="tagline" src="assets/MyoWorks_Tagline.svg" alt="Capture. Measure. Transform.">
+    <p class="sub">The connected instrument platform for manual therapists. One ecosystem that turns every session into objective, measurable clinical data.</p>
+    <div class="cta-row">
+      <a href="products.html" class="btn btn-primary">Explore the platform</a>
+      <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<!-- THESIS -->
+<section class="thesis">
+  <div class="wrap" style="padding:0">
+    <div class="thesis-grid">
+      <div class="thesis-cell reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Connected instruments</h3>
+        <p>Every device streams live measurement over Bluetooth as you work — no manual logging, no guesswork.</p>
+      </div>
+      <div class="thesis-cell reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 4 5-8 4 6"/><path d="M3 21h18"/></svg></div>
+        <h3>Objective data</h3>
+        <p>Force, response, and change captured session over session — progress you can actually show a patient.</p>
+      </div>
+      <div class="thesis-cell reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2.4"/></svg></div>
+        <h3>One shared record</h3>
+        <p>Documentation writes itself as a byproduct of the work. Every tool you add plugs into the same file.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT FAMILY -->
+<section class="block">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Product Family</span>
+      <h2>Built to grow <em>with your practice.</em></h2>
+      <p>Start with one instrument. Add capability as you go. They all connect to the same platform.</p>
+    </div>
+    <div class="fam-grid">
+      <a href="products.html#myoone" class="fam-card reveal">
+        <img class="fam-logo" src="assets/MyoOne.svg" alt="MyoOne">
+        <p>The foundation — a connected soft-tissue tool that captures tissue response as you treat.</p>
+        <span class="more">Learn more →</span>
+      </a>
+      <a href="products.html#myoone-e" class="fam-card reveal">
+        <img class="fam-logo" src="assets/MyoOneE.svg" alt="MyoOne E">
+        <p>Everything in MyoOne, with integrated electrotherapy delivered through the treatment surface.</p>
+        <span class="more">Learn more →</span>
+      </a>
+      <a href="products.html#myotrio" class="fam-card reveal">
+        <img class="fam-logo" src="assets/MyoTrio.svg" alt="MyoTrio">
+        <p>A multi-modal instrument — several therapies in one connected measurement engine.</p>
+        <span class="more">Learn more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- IN THE CLINIC -->
+<section class="block alt tight">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:36px">
+      <span class="eyebrow">In The Clinic</span>
+      <h2>Built for the people who <em>do the work.</em></h2>
+    </div>
+    <div class="band-slot reveal">
+      <img src="assets/photo_clinic.jpg" alt="Clinician treating a patient with a MyoWorks instrument in a clinic">
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="ctaband">
+  <div class="wrap">
+    <h2>More than a tool. A system.</h2>
+    <p>MyoWorks is launching soon. Join the early-access list and we'll reach out as the platform opens.</p>
+    <a href="contact.html" class="btn btn-primary">Request early access</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <img class="coin" src="assets/MyoWorks_Emblem.svg" alt="">
+          <img class="wm" src="assets/MyoWorks_Wordmark.svg" alt="MyoWorks">
+        </div>
+        <div class="foot-tag">Capture · Measure · Transform</div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:info@myoworks.us">info@myoworks.us</a>
+        <p>Windsor, Wisconsin</p>
+      </div>
+    </div>
+    <div class="foot-meta">© 2026 MyoWorks, Inc. · Built for the people who do the work.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

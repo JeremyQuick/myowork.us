@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — MyoWorks</title>
+<meta name="description" content="Get in touch with MyoWorks — questions, early access, and partnership inquiries.">
+<link rel="icon" href="assets/MyoWorks_Emblem.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.contact{padding:88px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.contact-info h2{font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:.02em;margin-bottom:16px}
+.contact-info p{color:var(--dim);font-size:1.02rem;margin-bottom:30px}
+.info-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.info-row .ic{color:var(--green-dark);flex:0 0 auto;margin-top:2px}
+.info-row h4{font-family:'Saira',sans-serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.info-row a,.info-row span{color:var(--ink);font-size:1rem}
+.info-row a:hover{color:var(--green-dark)}
+
+.form-card{background:var(--paper);border:1px solid var(--border-2);border-radius:10px;padding:40px}
+.field{margin-bottom:20px}
+.field label{display:block;font-family:'Saira',sans-serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.field input,.field textarea,.field select{
+  width:100%;background:var(--paper-2);border:1px solid var(--border-2);border-radius:5px;
+  color:var(--ink);font-family:'Inter',sans-serif;font-size:.98rem;padding:14px 16px;transition:.2s;
+}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(50,176,38,.13);background:var(--paper)}
+.form-msg{margin-top:16px;font-family:'Saira',sans-serif;font-weight:600;letter-spacing:.04em;font-size:.9rem;display:none}
+.form-msg.show{display:block}
+.form-msg.ok{color:var(--green-dark)}
+.form-msg.err{color:#C0392B}
+@media (max-width:820px){.contact-grid{grid-template-columns:1fr;gap:40px}.form-card{padding:28px}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img class="coin" src="assets/MyoWorks_Emblem.svg" alt="MyoWorks emblem">
+      <img class="wm" src="assets/MyoWorks_Wordmark.svg" alt="MyoWorks">
+    </a>
+    <button class="nav-toggle" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="phero">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1>Let's <em>talk.</em></h1>
+    <p>Questions, early-access requests, or partnership inquiries — send a note and we'll get back to you.</p>
+  </div>
+</header>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h2>Reach out</h2>
+        <p>We read everything that comes in. For early access, tell us a little about your practice and we'll keep you posted as the platform opens.</p>
+        <div class="info-row">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></span>
+          <div><h4>Email</h4><a href="mailto:info@myoworks.us">info@myoworks.us</a></div>
+        </div>
+        <div class="info-row">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><h4>Location</h4><span>Windsor, Wisconsin</span></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@yourpractice.com">
+        </div>
+        <div class="field">
+          <label for="topic">Reason for reaching out</label>
+          <select id="topic">
+            <option>Early access</option>
+            <option>Product question</option>
+            <option>Partnership / distribution</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us a little about your practice or what you're looking for."></textarea>
+        </div>
+        <button class="btn btn-primary" id="sendBtn" style="width:100%">Send message</button>
+        <div class="form-msg" id="formMsg"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <img class="coin" src="assets/MyoWorks_Emblem.svg" alt="">
+          <img class="wm" src="assets/MyoWorks_Wordmark.svg" alt="MyoWorks">
+        </div>
+        <div class="foot-tag">Capture · Measure · Transform</div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:info@myoworks.us">info@myoworks.us</a>
+        <p>Windsor, Wisconsin</p>
+      </div>
+    </div>
+    <div class="foot-meta">© 2026 MyoWorks, Inc. · Built for the people who do the work.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+// ── Contact form → Formspree ──────────────────────────────
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbdnypzz";
+const sendBtn=document.getElementById('sendBtn');
+const msg=document.getElementById('formMsg');
+const f={name:document.getElementById('name'),email:document.getElementById('email'),
+         topic:document.getElementById('topic'),message:document.getElementById('message')};
+
+function show(type,text){msg.className='form-msg show '+type;msg.textContent=text;}
+
+sendBtn.addEventListener('click',async ()=>{
+  const email=f.email.value.trim();
+  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    f.email.focus();f.email.style.borderColor='#C0392B';show('err','Please enter a valid email so we can reply.');return;
+  }
+  f.email.style.borderColor='';
+  sendBtn.disabled=true;const label=sendBtn.textContent;sendBtn.textContent='Sending…';
+  try{
+    const res=await fetch(FORMSPREE_ENDPOINT,{
+      method:'POST',headers:{'Accept':'application/json'},
+      body:JSON.stringify({
+        name:f.name.value.trim(),
+        email:email,
+        topic:f.topic.value,
+        message:f.message.value.trim(),
+        _subject:'New MyoWorks contact: '+f.topic.value
+      })
+    });
+    if(res.ok){
+      show('ok','Thanks — your message is on its way. We\u2019ll be in touch soon.');
+      f.name.value='';f.email.value='';f.message.value='';
+    }else{show('err','Something went wrong. Please email info@myoworks.us directly.');}
+  }catch(e){show('err','Network error. Please email info@myoworks.us directly.');}
+  finally{sendBtn.disabled=false;sendBtn.textContent=label;}
+});
+</script>
+</body>
+</html>
