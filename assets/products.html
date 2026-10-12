@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — MyoWorks</title>
+<meta name="description" content="The MyoWorks product family: MyoOne, MyoOne E, and MyoTrio — connected soft-tissue instruments that share one clinical platform.">
+<link rel="icon" href="assets/emblem.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Special+Gothic+Condensed+One&family=Special+Gothic&family=Bruno+Ace&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.prod{padding:96px 0;border-bottom:1px solid var(--border)}
+.prod:nth-child(even){background:var(--paper-2)}
+.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.prod.flip .prod-grid{direction:rtl}
+.prod.flip .prod-grid>*{direction:ltr}
+.prod-logo{height:44px;width:auto;margin-bottom:8px}
+.prod-role{font-family:'Special Gothic Expanded One',sans-serif;font-weight:600;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.prod-copy h2{font-family:'Special Gothic Condensed One',sans-serif;font-weight:700;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.08;letter-spacing:.02em;margin-bottom:18px}
+.prod-copy h2 em{font-style:normal;color:var(--green-dark)}
+.prod-copy p{color:var(--dim);font-size:1.02rem;margin-bottom:22px}
+.prod-copy ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.prod-copy li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-soft);font-size:.98rem}
+.prod-copy li svg{flex:0 0 auto;margin-top:3px;color:var(--green)}
+.prod-tag{display:inline-block;margin-top:26px;font-family:'Special Gothic Expanded One',sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--green-dark);border:1px solid var(--border-2);border-radius:100px;padding:8px 16px}
+
+.eco{padding:96px 0}
+.eco-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.eco-copy h2{font-family:'Special Gothic Condensed One',sans-serif;font-weight:700;font-size:clamp(1.8rem,4.4vw,2.8rem);letter-spacing:.02em;line-height:1.06}
+.eco-copy h2 em{font-style:normal;color:var(--green-dark)}
+.eco-copy p{color:var(--dim);margin-top:18px;font-size:1.05rem}
+.eco-diagram{background:var(--panel);border:1px solid var(--border-2);border-radius:12px;padding:40px;display:flex;flex-direction:column;align-items:center;gap:0}
+.eco-node{font-family:'Special Gothic Condensed One',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.03em;padding:14px 22px;border:1.5px solid var(--border-2);border-radius:6px;background:var(--paper);width:100%;text-align:center}
+.eco-node.hub{border-color:var(--green);color:var(--green-dark);background:var(--green-tint)}
+.eco-line{width:2px;height:26px;background:var(--border-2)}
+.eco-row{display:flex;gap:12px;width:100%}
+.eco-row .eco-node{flex:1;font-size:.92rem;padding:12px 8px}
+@media (max-width:820px){
+  .prod-grid,.eco-inner{grid-template-columns:1fr;gap:32px}
+  .prod.flip .prod-grid{direction:ltr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img class="coin" src="assets/emblem.svg" alt="MyoWorks emblem">
+      <img class="wm" src="assets/wordmark.svg" alt="MyoWorks">
+    </a>
+    <button class="nav-toggle" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="phero">
+  <div class="wrap">
+    <span class="eyebrow">The Platform</span>
+    <h1>One family. <em>One record.</em></h1>
+    <p>Every MyoWorks instrument captures objective data and feeds the same clinical platform. Start with one; add the rest as your practice grows.</p>
+  </div>
+</header>
+
+<!-- MYOONE -->
+<section class="prod" id="myoone">
+  <div class="wrap">
+    <div class="prod-grid">
+      <div class="prod-copy reveal">
+        <img class="prod-logo" src="assets/product-one.svg" alt="MyoOne">
+        <div class="prod-role">Soft Tissue Tool</div>
+        <h2>The foundation of the <em>platform.</em></h2>
+        <p>A precision instrument-assisted soft-tissue tool built to feel balanced in the hand and read tissue as you work. MyoOne captures response in real time and sends it straight to the connected record.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Live tissue-response capture over Bluetooth</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Medical-grade construction, ergonomic by design</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Feeds the same shared clinical record as every other tool</li>
+        </ul>
+        <span class="prod-tag">Coming Soon</span>
+      </div>
+      <!-- MyoOne finished product -->
+      <div class="img-slot product reveal">
+        <img src="assets/photo_myoone_tool.png" alt="The finished MyoOne instrument">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MYOONE E -->
+<section class="prod flip" id="myoone-e">
+  <div class="wrap">
+    <div class="prod-grid">
+      <div class="prod-copy reveal">
+        <img class="prod-logo" src="assets/product-one-e.svg" alt="MyoOne E">
+        <div class="prod-role">Soft Tissue Tool · Electric</div>
+        <h2>Soft-tissue work, <em>plus electrotherapy.</em></h2>
+        <p>MyoOne E carries everything the core instrument does and adds integrated electrotherapy delivered through the treatment surface — one tool, two modalities, the same connected data.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>All MyoOne capture, plus integrated electrotherapy</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Modality applied through the treatment surface</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Same platform, same record, richer session data</li>
+        </ul>
+        <span class="prod-tag">Coming Soon</span>
+      </div>
+      <div class="img-slot reveal">
+        <img src="assets/photo_clinic.jpg" alt="Clinician treating a patient's lower leg with electrotherapy pads in place">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MYOTRIO -->
+<section class="prod" id="myotrio">
+  <div class="wrap">
+    <div class="prod-grid">
+      <div class="prod-copy reveal">
+        <img class="prod-logo" src="assets/product-trio.svg" alt="MyoTrio">
+        <div class="prod-role">Multi-Modal Soft Tissue Tool</div>
+        <h2>Several therapies, <em>one instrument.</em></h2>
+        <p>MyoTrio brings multiple treatment modalities together in a single precision instrument, all driven by one connected measurement engine — the most complete expression of the MyoWorks platform.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Multiple modalities in one connected tool</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>One measurement engine across every modality</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Built for practices that want the full platform</li>
+        </ul>
+        <span class="prod-tag">Coming Soon</span>
+      </div>
+      <div class="img-slot reveal" style="background:#ECEEE9">
+        <img src="assets/photo_cad.jpg" alt="Engineering render of the MyoWorks instrument internals" style="object-fit:contain;padding:20px">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section class="eco">
+  <div class="wrap">
+    <div class="eco-inner">
+      <div class="eco-copy reveal">
+        <span class="eyebrow">Why It Connects</span>
+        <h2>Every tool speaks <em>the same language.</em></h2>
+        <p>The instrument you hold is only half of MyoWorks. Each device feeds one shared clinical record, so the data compounds — every tool you add makes the whole system more useful, not more complicated.</p>
+      </div>
+      <div class="eco-diagram reveal">
+        <div class="eco-row">
+          <div class="eco-node">MyoOne</div>
+          <div class="eco-node">MyoOne E</div>
+          <div class="eco-node">MyoTrio</div>
+        </div>
+        <div class="eco-line"></div>
+        <div class="eco-node hub">One connected record</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="block alt tight" style="text-align:center">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:24px">
+      <h2>Want in early?</h2>
+      <p>MyoWorks is launching soon. Reach out and we'll keep you posted as the platform opens.</p>
+    </div>
+    <a href="contact.html" class="btn btn-primary reveal">Get in touch</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <img class="coin" src="assets/emblem.svg" alt="">
+          <img class="wm" src="assets/wordmark.svg" alt="MyoWorks">
+        </div>
+        <div class="foot-tag">Capture · Measure · Transform</div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:info@myoworks.us">info@myoworks.us</a>
+        <p>Windsor, Wisconsin</p>
+      </div>
+    </div>
+    <div class="foot-meta">© 2026 MyoWorks, Inc. · Built for the people who do the work.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
